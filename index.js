@@ -7,7 +7,7 @@ import { dbConnection } from "./database/dbConnection.js";
 
 import user from "./routes/user.js"
 
-const app = express();
+const app = express()
 
 
 config({ path: "./config/config.env" })
