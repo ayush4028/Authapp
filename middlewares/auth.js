@@ -7,8 +7,8 @@ dotenv.config();
 export const auth = (req, res, next) => {
     try{
         // extract jwt token
-        // PENDING: Other ways to fetch token
-        const token = req.body.token;
+        // PENDING: Other ways to fetch tokens
+        const token = req.cookies.token || req.body.token || req.header("Authorization").replace("Bearer ", ""); 
         if(!token){
             res.status(401).json({
                 success: false,

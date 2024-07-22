@@ -76,7 +76,7 @@ export const login = async (req, res) => {
             user = user.toObject();
             user.token = token;
             user.password = undefined;
-
+            
             const options = {
                 expires: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000),
                 httpOnly: true

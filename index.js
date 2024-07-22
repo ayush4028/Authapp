@@ -1,9 +1,10 @@
 import express from "express"
 import { config } from "dotenv"
 import cors from "cors"
-import cookieParser from "cookie-parser";
+// import cookieParser from "cookie-parser";
 import { dbConnection } from "./database/dbConnection.js";
 // import morgan from "morgan";
+import cookieParser from "cookie-parser";
 
 import user from "./routes/user.js"
 
